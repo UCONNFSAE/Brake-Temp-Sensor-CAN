@@ -40,7 +40,7 @@ void loop() {
     Serial.println("Configuring Front...");
     for(int i = 0; i <= 12; i++)
     {
-      CAN.sendMsgBuf(0x4C4, 0, 8, cfg_front);
+      CAN.sendMsgBuf(0x4C4, 0, 8, cfg_front); //(Target address, Standard frame, Length of frame, Data array)
       delay(1000);
     }
     Serial.println("Front Config Done!");
